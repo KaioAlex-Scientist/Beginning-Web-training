@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Comic Sans";
+    src: url("arquivos-base/fontes/COMIC.TTF");
+}
+*{
+    font-family: "Comic Sans", "cursive";
+    font-weight: bolder;
+    color: white;
+    margin: 0;
+}
+body{
+    background-image: url("arquivos-base/Imagens/background-m.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x:right ;
+}
+main{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+div.donate{
+    width: 80%;         /* ocupa 90% da tela */
+    max-width: 350px;     /* mas nunca passa de 600px */
+    margin: 5% 0 2% 10%;       /* centraliza */
+}
+div.donate>p{
+    font-size: 1.2rem;
+    word-spacing: 2px;
+    margin: auto;
+    line-height: 1.4;
+}
+div.donate>.donate_img{
+    width: 170px;
+    margin: auto;
+    padding-top: 20px;
+}
+div.video_content{
+    width: 90%;           /* ocupa 90% da tela */
+    max-width: 600px;     /* mas nunca passa de 600px */
+    margin: 0 0.5%;       /* centraliza */
+}
+div.video_content > p{
+    font-size: 1.4rem;
+    word-spacing: 2px;
+    margin: 2% auto 20px auto;
+    line-height: 1.4;
+}
+div.video_content>iframe{
+    width: 100%;       /* ocupa toda a largura disponível */
+    aspect-ratio: 16/9; /* mantém proporção do vídeo */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: auto;
+}
+#titulo_video{
+    background-color: rgba(128, 128, 128, 0.13);
+    font-size: 1.2rem;
+    text-align: left;
+    text-indent: 5px;
+    margin-top: -5px;
+}
+div.download_gif{
+    width: 30%;
+    margin: auto;
+}
+footer{
+    display: inline-block;
+    width: 90%;           /* ocupa 90% da tela */
+    max-width: 600px;     /* mas nunca passa de 600px */
+    margin: auto auto auto 2%;
+}
+footer > p{
+    font-size: 1rem;
+    line-height: 1.4;
+}
+div.footer_img{
+    width: 200px;
+    height: auto;
+    margin: auto;
+}
+div.footer_img>img{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+.texto-fade{
+    font-weight: bolder;
+    text-align: center;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7300,
+        #ffee00,
+        #00ff6a,
+        #00ffff,
+        #0040ff,
+        #7a00ff,
+        #ff00c8);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@media (max-width: 768px) {
+    body{
+        background-position: center;
+        background-attachment: fixed;
+    }
+    main{
+        display: flex;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    div.video_content{
+    width: 90%;           /* ocupa 90% da tela */
+    max-width: 600px;     /* mas nunca passa de 600px */
+    margin: 0 0 0 5%;       /* centraliza */
+    }
+    footer{
+        margin: 0 0 0 8%;
+    }
+}
